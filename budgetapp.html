@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budgeting App - Testing</title>
+  <link rel="stylesheet" href="./budgetstyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7f7b3e390a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="heading">
+    <h1>Budget App - Trial</h1>
+  </div>
+  <div class="output-center">
+    <div class="result-container">
+        <div class="result-section">
+          <p class="result-heading">Total Budget</p>
+          <p id="total-budget">0</p>
+        </div>
+        <div class="result-section">
+          <p class="result-heading">Expenses</p>
+          <p id="expenses">0</p>
+        </div>
+        <div class="result-section">
+          <p class="result-heading">Balance</p>
+          <p id="balance">0</p>
+        </div>
+  </div>
+
+      </div>
+  <div class="wrapper">
+    <div class="container">
+      <!-- SET BUDGET SECTION -->
+      <div class="input-fields">
+      <div class="budget-container">
+        <p class="budget-heading">Budget <span class="error hide" id="budget-error">*</span> </p>
+        <input type="number" id="budget-amount" placeholder="Enter amount here" class="number-amount">
+        <button type="submit" id="budget-button" class="set-budget-button">Set Budget</button>
+      </div>
+      
+      
+      
+      <form class="add-expense-form" id="add-expense-form">
+        <!-- ADD EXPENSE SECTION -->
+         <p class="budget-heading">Expense Form </p>
+        <div class="expense-info">
+          <p class="info-title">Expense Amount <span class="error hide" id="expense-amount-error">*</span></p>
+        <input type="number" id="expense-amount" class="expense-amount" required>
+        </div>
+        <div class="expense-info">
+          <p class="info-title">Category <span class="error hide" id="category-error">*</span></p>
+        <select id="expense-category" placeholder="Cost of services provided" class="expense-category" required>
+          <option value="Groceries">Groceries</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Credits">Credits</option>
+          <option value="Fuel">Fuel</option>
+          <option value="Pharmacy">Pharmacy</option>
+          <option value="Utilities">Utilities</option>
+          <option value="Miscellaneous">Miscellaneous</option>
+        </select>
+        </div>
+        <div class="expense-info">
+          <p class="info-title">Description</p>
+        <input type="text" id="expense-description" placeholder="(optional)" class="description">
+        </div>
+        <div class="payment-date-info">
+          <p class="info-title">Payment Date <span class="error hide" id="payment-date-error">*</span></p>
+        <input type="date" id="payment-date" class="payment-date" required>
+        </div>
+        <button type="submit" id="expense-button" class="set-budget-button">Enter Expense</button>
+      </form>
+      </div>
+      
+          <div class="expense-list-container" id="expense-list-container">
+        </div>
+      
+    </div>
+  </div>
+</body>
+<script src="./budgetapp.js"></script>
+</html>
